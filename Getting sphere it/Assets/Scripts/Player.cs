@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
+    public Transform freelook;
     Rigidbody rb;
     float hor, ver;
     public float force;
+    Vector3 direction;
 
     Jump jump;
 
@@ -28,7 +31,11 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector3 direction = new Vector3(hor, 0, ver);
+        Vector3 camFoward = transform.position - freelook.position;
+        camFoward = new Vector3(camFoward.x, 0, camFoward.z).normalized;
+        Vector3 camRight = Vector3.Cross(Vector3.up, camFoward).normalized;
+
+        direction = camFoward * ver + camRight * hor;
         rb.AddForce(direction * force);
     }
 
