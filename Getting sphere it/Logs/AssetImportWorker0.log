@@ -15,11 +15,11 @@ D:/Unity-projects/Getting-sphere-it/Getting sphere it
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57534
+50157
 Successfully changed project path to: D:/Unity-projects/Getting-sphere-it/Getting sphere it
 D:/Unity-projects/Getting-sphere-it/Getting sphere it
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 31.84 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 31.06 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -36,94 +36,59 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000770 seconds.
+Registered in 0.000754 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 31.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 32.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.596 seconds
+- Completed reload, in  0.614 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000830 seconds.
+Registered in 0.000712 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 33.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.607 seconds
+- Completed reload, in  0.624 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2573 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.7 MB.
+Unloading 2575 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.8 MB.
 System memory in use after: 132.9 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3032.
-Total: 2.065700 ms (FindLiveObjects: 0.198500 ms CreateObjectMapping: 0.146300 ms MarkObjects: 1.644900 ms  DeleteObjects: 0.075200 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3034.
+Total: 3.501200 ms (FindLiveObjects: 0.460500 ms CreateObjectMapping: 0.104300 ms MarkObjects: 2.786700 ms  DeleteObjects: 0.148500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/IgniteCoders/Simple Water Shader/Info/Scripts
-  artifactKey: Guid(5a9bcd70e6a4b4b05badaa72e827d8e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgniteCoders/Simple Water Shader/Info/Scripts using Guid(5a9bcd70e6a4b4b05badaa72e827d8e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54733440b4d4bef0b9d2c30ad01ad327') in 0.007054 seconds
-  Import took 0.010124 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000718 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.566 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 125.7 MB.
-System memory in use after: 125.9 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3037.
-Total: 1.834300 ms (FindLiveObjects: 0.250100 ms CreateObjectMapping: 0.064200 ms MarkObjects: 1.464900 ms  DeleteObjects: 0.054400 ms)
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(110e28585978cee478389a71316d140a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(110e28585978cee478389a71316d140a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2adcb5bc2f86c894b536b18b25dcebcb') in 0.024479 seconds
+  Import took 0.028969 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.500010 seconds.
-  path: Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Dash.cs
-  artifactKey: Guid(8261f3282ff0ddd4eb77600826eada1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Dash.cs using Guid(8261f3282ff0ddd4eb77600826eada1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f829d1f604476fc93453c3b0ebd38299') in 0.018895 seconds
-  Import took 0.021840 seconds .
+  Time since last request: 130.537173 seconds.
+  path: Assets/Scripts/Jump.cs
+  artifactKey: Guid(bc5c10662346fc546a10eea33d90c6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Jump.cs using Guid(bc5c10662346fc546a10eea33d90c6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e1a50df423ed54169f499b2ca49304') in 0.004529 seconds
+  Import took 0.008235 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000880 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.548 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 125.8 MB.
-System memory in use after: 126.0 MB.
+Received Import Request.
+  Time since last request: 35.294622 seconds.
+  path: Assets/Scripts/Jump.cs
+  artifactKey: Guid(bc5c10662346fc546a10eea33d90c6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Jump.cs using Guid(bc5c10662346fc546a10eea33d90c6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799d48d08c6bede42209b84dbe6199ad') in 0.002398 seconds
+  Import took 0.006396 seconds .
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3040.
-Total: 1.737100 ms (FindLiveObjects: 0.194100 ms CreateObjectMapping: 0.065000 ms MarkObjects: 1.432200 ms  DeleteObjects: 0.045300 ms)
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file

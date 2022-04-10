@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public float jumpSpeed;
-    float jumph = 1;
+    public float jumph = 1;
     public bool isTouchingGround = true;
     Vector3 jump;
     Rigidbody rb;
