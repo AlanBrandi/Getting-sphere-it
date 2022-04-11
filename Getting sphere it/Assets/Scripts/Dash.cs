@@ -5,27 +5,27 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
     public GameObject player;
+    PlayerManager playerManager;
     Player playerScript;
     public float dashSpeed;
     public bool NotTouchingGround = true;
     float gravityDashSpeed = 0;
     Rigidbody rb;
-
-
-
+    UiManager uiManager;
 
     private void Start()
     {
+        uiManager = FindObjectOfType<UiManager>();
         rb = GetComponent<Rigidbody>();
         playerScript = player.GetComponent<Player>();
-
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     private void Update()
     {
         
 
-        if (Input.GetKeyDown(KeyCode.P) && NotTouchingGround)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && NotTouchingGround)
         {
             StartCoroutine(Das());
         }
@@ -48,6 +48,8 @@ public class Dash : MonoBehaviour
         playerScript.force *= dashSpeed;
         rb.useGravity = false;
         rb.velocity = new Vector2(rb.velocity.x, y: -gravityDashSpeed);
+        playerManager.DesligarDash();
+        uiManager.PegouDashfalse();
 
 
         yield return new WaitForSeconds(.2f);
@@ -55,6 +57,5 @@ public class Dash : MonoBehaviour
         rb.useGravity = true;
         playerScript.force = forceorg;
         NotTouchingGround = false;
-        
     }
 }

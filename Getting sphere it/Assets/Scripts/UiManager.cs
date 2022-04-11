@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
-    TMP_Text txtScore;
-    TMP_Text txtLives;
+    public TMP_Text txtScore;
 
+    Transform playertranform;
     public GameObject FX;
     int score = 0;
-    int live = 3;
+    int live = 10;
     public Slider slide;
     public GameObject player;
 
@@ -23,20 +24,25 @@ public class UiManager : MonoBehaviour
     public GameObject PegouDash;
     public GameObject PegouJump;
 
+
     //================================================================
+
+
+
     private void Start()
     {
-        //txtScore.text = "0";
+        playertranform = player.GetComponent<Transform>();
+        gameObject.SetActive(true);
+        txtScore.text = "0";
+
         HUD.SetActive(true);
         NextLevel.SetActive(false);
-        gameObject.SetActive(false);
-
         PegouChave.SetActive(false);
         PegouDash.SetActive(false);
         PegouJump.SetActive(false);
 
         slide.value = live;
-        live = 3;
+        live = 10;
     }
 
 
@@ -49,6 +55,7 @@ public class UiManager : MonoBehaviour
     }
     public void SetLife(int val)
     {
+        Debug.Log(val);
         live -= val;
         slide.value = live;
     }
@@ -57,7 +64,7 @@ public class UiManager : MonoBehaviour
 
     public void MyLoadScene(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 
     public void PassouFase()
@@ -84,14 +91,39 @@ public class UiManager : MonoBehaviour
     {
         PegouJump.SetActive(true);
     }
+    public void PegouJumpfalse()
+    {
+        PegouJump.SetActive(false);
+    }
+
+    public void PegouChavefalse()
+    {
+        PegouChave.SetActive(false);
+    }
+    public void PegouDashfalse()
+    {
+        PegouDash.SetActive(false);
+    }
+    public void QuitGame()
+    {
+     Application.Quit();
+    }
+
+    public void Renascer()
+    {
+        GameOver.SetActive(false);
+        SceneManager.LoadScene("Level");
+        //player.transform.position = playertranform.position;
+        //HUD.SetActive(true);
+    }
+
     private void Update()
     {
-
         if (live <= 0)
         {
             Destroy(player.gameObject);
             Instantiate(FX, player.transform.position, Quaternion.identity);
-            HUD.SetActive(true);
+            HUD.SetActive(false);
             GameOver.SetActive(true);
         }
     }

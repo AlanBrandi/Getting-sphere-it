@@ -9,11 +9,15 @@ public class Jump : MonoBehaviour
     public bool isTouchingGround = true;
     Vector3 jump;
     Rigidbody rb;
+    PlayerManager player;
+    AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         jump = new Vector3(0, jumph, 0);
         rb = GetComponent<Rigidbody>();
+        player = FindObjectOfType<PlayerManager>();
     }
 
     private void Update()
@@ -21,8 +25,10 @@ public class Jump : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isTouchingGround)
         {
+            audioSource.Play();
             rb.AddForce(jump * jumpSpeed, ForceMode.Impulse);
             isTouchingGround = false;
+            player.DesligarDoubleJump();
         }
     }
 

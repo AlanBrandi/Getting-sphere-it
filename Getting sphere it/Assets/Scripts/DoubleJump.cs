@@ -8,14 +8,18 @@ public class DoubleJump : MonoBehaviour
     float jumph = 1;
     public bool isTouchingGround = true;
     Vector3 jump;
+    PlayerManager playerManager;
     Jump jumpScript;
     Rigidbody rb;
+    UiManager uiManager;
 
     private void Start()
     {
+        uiManager = FindObjectOfType<UiManager>();
         jumpScript = GetComponent<Jump>();
         jump = new Vector3(0, jumph, 0);
         rb = GetComponent<Rigidbody>();
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     private void Update()
@@ -25,6 +29,8 @@ public class DoubleJump : MonoBehaviour
         {
             rb.AddForce(jump * jumpSpeed, ForceMode.Impulse);
             isTouchingGround = false;
+            playerManager.DesligarDoubleJump();
+            uiManager.PegouJumpfalse();
         }
     }
     private void OnCollisionStay(Collision collision)
