@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public Transform freelook;
     Rigidbody rb;
-    float hor, ver;
+    float hor, ver, originalForce;
     public float force;
     Vector3 direction;
 
@@ -15,11 +15,12 @@ public class Player : MonoBehaviour
 
     float ground_force;
     public float jumpPad_h;
-    public float boost_force;
+    public float boost_force, boost_force2;
     public float Decrease_force;
 
     private void Start()
     {
+        originalForce = force;
         rb = GetComponent<Rigidbody>();
         jump = GetComponent<Jump>();
         ground_force = force;
@@ -53,11 +54,21 @@ public class Player : MonoBehaviour
 
             case "Boost":
                 force = boost_force;
+                Invoke(nameof(ReturnToNormal), 1f);
             break;
+            case "Boost2":
+                force = boost_force2;
+                Invoke(nameof(ReturnToNormal), 1f);
+                break;
 
             case "Decrease":
                 force = Decrease_force;
             break;
         }
+    }
+
+    void ReturnToNormal()
+    {
+        force = originalForce;
     }
 }
